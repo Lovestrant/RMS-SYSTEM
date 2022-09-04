@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:rms_app/Views/Auth/Owner.dart';
+import 'package:rms_app/Views/Auth/SignUp.dart';
+import 'package:rms_app/Views/Auth/Signin.dart';
+import 'Views/Index.dart';
 import 'Views/SplashScreen.dart';
 
 void main() {
@@ -31,6 +35,10 @@ class MyApp extends StatelessWidget {
 
         routes: <String, WidgetBuilder>{
            '/splashScreen': (BuildContext context) => const SplashScreen(title: 'Splash Screen'),
+          '/Owner': (BuildContext context) => const Owner(title: 'Owner', owner: '',),
+          '/Signin': (BuildContext context) => Signin(title: 'Signin', owner: '',),
+          '/SignUp': (BuildContext context) => SignUp(title: 'SignUp', Owner: '',),
+          '/Index': (BuildContext context) => const Index(title: 'Index'),
         });
 
   }

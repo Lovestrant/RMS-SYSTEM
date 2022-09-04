@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rms_app/Views/AppColors/AppColors.dart';
@@ -8,6 +10,15 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    void directToIndex() {
+      Navigator.pushNamed(context, '/Index');
+    }
+
+    Timer(const Duration(seconds: 3), () {
+      directToIndex();
+    });
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       color: AppColors.blueTheme,
