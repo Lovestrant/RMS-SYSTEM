@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "231518493473",
+    "project_id": "rms-system-2b308",
+    "storage_bucket": "rms-system-2b308.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231518493473:android:b0f9b887dad93cc189fc60",
+        "android_client_info": {
+          "package_name": "com.rental.rms_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "231518493473-gsjnaenkc39te2s91v7d3snktcco0gcu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfituHXAii3ygVKaffvB4qReg1EirfM4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "231518493473-gsjnaenkc39te2s91v7d3snktcco0gcu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

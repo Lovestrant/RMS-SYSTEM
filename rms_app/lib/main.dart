@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:rms_app/Views/Auth/Owner.dart';
 import 'package:rms_app/Views/Auth/SignUp.dart';
 import 'package:rms_app/Views/Auth/Signin.dart';
+import 'package:rms_app/Views/Dashboard/JoinRentalGroup.dart';
+import 'package:rms_app/Views/Dashboard/ownerdashboard.dart';
+import 'package:rms_app/Views/Dashboard/tenantdashboard.dart';
+import 'Views/Auth/Reset.dart';
 import 'Views/Index.dart';
 import 'Views/SplashScreen.dart';
 
@@ -39,6 +43,10 @@ class MyApp extends StatelessWidget {
           '/Signin': (BuildContext context) => Signin(title: 'Signin', owner: '',),
           '/SignUp': (BuildContext context) => SignUp(title: 'SignUp', Owner: '',),
           '/Index': (BuildContext context) => const Index(title: 'Index'),
+          '/Reset': (BuildContext context) => const Reset(title: 'Reset'),
+          '/Tenantdashboard': (BuildContext context) => const tenantdashboard(title: 'Tenantdashboard'),
+          '/Ownerdashboard': (BuildContext context) => const ownerdashboard(title: 'ownerdashboard'),
+          '/JoinRentalGroup': (BuildContext context) => const JoinRentalGroup(title: 'Join Rental Group'),
         });
 
   }

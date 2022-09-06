@@ -40,37 +40,38 @@ class _SigninState extends State<Signin> {
 
               SizedBox(height: 10,),
               Text("Fill Fields to Sign In", style: TextStyle(color:  AppColors.redTheme, fontSize: 20),),
-              SizedBox(height: 5,),
+              SizedBox(height: 20,),
               Center(
                 child: Container(
                   width: calculatedWidth,
 
                   child: Column(
                     children: [
-                      TextFormField(
+                      TextField(
                         obscureText: false,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
+                          labelText: 'Enter Phone/Email',
                           hintText: 'Enter Phone/Email',
                         ),
                       ),
 
-                      SizedBox(height: 5,),
+                      SizedBox(height: 10,),
 
-                      TextFormField(
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: 'Enter Password',
-                        ),
-                      ),
+                  TextField (
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Enter Password',
+                        hintText: 'Enter Password'
+                    ),
+                  ),
 
-                      SizedBox(height: 15,),
+                  SizedBox(height: 15,),
 
                       TextButton(
                           onPressed: () {
-
-
+                            Navigator.pushNamed(context, "/Tenantdashboard");
                           },
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all(
@@ -86,6 +87,47 @@ class _SigninState extends State<Signin> {
                               MaterialStateProperty.all(Size(250, 40))
                           ),
                           child: Text("SIGN IN")
+                      ),
+
+                      SizedBox(height: 10,),
+                      TextButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, "/Reset");
+                          },
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                  AppColors.homeTheme),
+                              foregroundColor:
+                              MaterialStateProperty.resolveWith(
+                                      (states) => Colors.redAccent),
+                              shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5)),
+                              ),
+                              fixedSize:
+                              MaterialStateProperty.all(Size(250, 40))
+                          ),
+                          child: Text("Forgot Password? ")
+                      ),
+
+                      TextButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, "/SignUp");
+                          },
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                  AppColors.homeTheme),
+                              foregroundColor:
+                              MaterialStateProperty.resolveWith(
+                                      (states) => AppColors.greenishTheme),
+                              shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5)),
+                              ),
+                              fixedSize:
+                              MaterialStateProperty.all(Size(250, 40))
+                          ),
+                          child: Text("Create Account")
                       ),
                     ],
                   ),
